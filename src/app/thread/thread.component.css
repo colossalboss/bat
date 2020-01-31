@@ -1,0 +1,108 @@
+main {
+  width: 50%;
+  height: 90.6vh;
+  overflow: scroll;
+  margin: auto;
+  background: #fff;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+.main-post .post {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0 0 0;
+  align-items: flex-start;
+}
+
+.main-post .con:hover {
+  background: #dde3e4ed;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.main-post .post .user-name {
+  margin: 0 .8rem;
+}
+
+.main-post .post .profile-pic img {
+  width: 50px;
+  border-radius: 50%;
+  margin: .5rem;
+}
+
+.main-post .post .profile-pic img:hover {
+  cursor: pointer;
+}
+
+.streaks .outcome {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  background: green;
+  margin: .035rem;
+}
+
+.main-post .icons {
+  display: flex;
+  justify-content: space-around;
+  color: #1975d2;
+  padding: .5rem 0 1rem 0;
+}
+
+.icons i:hover {
+  cursor: pointer;
+}
+
+.thread .comment .user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thread .comment:hover {
+  background: #dde3e4ed;
+}
+
+.thread .comment .user .dp {
+  width: 8%;
+  padding: .5rem;
+}
+
+.thread .comment .user .post-main {
+  width: 95%;
+  padding: 0 .5rem;
+}
+
+.thread .comment .user .dp img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.thread .comment .user .icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.thread .comment .user .icons i {
+  color: #1975d2;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 80%
+  }
+}
+
+@media (max-width: 414px) {
+  main {
+    width: 95%
+  }
+}

@@ -1,0 +1,39 @@
+#content {
+  width: 95%;
+  margin: auto;
+  background: #fff;
+}
+
+#content .standing {
+  padding: .5rem;
+}
+
+#content .standing h1 {
+  color: #1975d2;
+}
+
+#content .standing table {
+  width: 100%;
+  text-align: center;
+}
+
+#content .standing table th {
+  background: #1975d2;
+  color: #fff;
+}
+
+#content .standing table th, tr {
+  border: transparent;
+}
+
+#content .standing table td {
+  padding: .7rem 0;
+}
+
+#content .standing tr:nth-child(odd) {
+  background: #cccccc5c;
+}
+
+#content .standing tr:nth-child(even) {
+  background: #cccccc26;
+}

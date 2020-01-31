@@ -1,0 +1,66 @@
+#edit {
+  width: 100%;
+  margin: auto;
+  padding: .5rem;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.img-upload input {
+  display: none;
+}
+
+.img-upload {
+  width: 30% !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  padding: .5rem;
+  height: 100px;
+  background: url(https://pbs.twimg.com/profile_images/1048247942006689792/eLkgGbom_400x400.jpg) no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.img-upload label {
+  width: 100%;
+}
+
+.img-upload label:hover {
+  cursor: pointer;
+}
+
+.img-upload i {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+}
+
+.btns button {
+  margin: 0 0 1rem 0;
+  background: #1975d2;
+}
+
+.close {
+  background: #ff4081;
+  padding: .6rem;
+  border-radius: 4px;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.close:hover {
+  cursor: pointer;
+}

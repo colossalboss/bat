@@ -1,0 +1,94 @@
+main {
+  height: 90.6vh;
+  overflow: scroll;
+}
+
+#top {
+  width: 50%;
+  background: #fff;
+  margin: auto;
+}
+
+#top .con .profile-img {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+#top .con .profile-img .edit-div,
+#top .con .profile-img .image {
+  width: 50%;
+}
+
+#top .con .profile-img .edit-div {
+  text-align: right;
+}
+
+#top .con .profile-img .edit-div .edit-btn {
+  color: #1975d2;
+}
+
+#top .con .profile-img .edit-div a {
+  border: 2px solid #1975d2;
+  padding: .5rem;
+  border-radius: 15px;
+  text-decoration: none;
+  background: #fff;
+  color: #1975d2;
+}
+
+
+#top .con .profile-img .image img {
+  width: 40%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+#top .con .others .name-div {
+  padding: 0 .5rem;
+  margin: 0 0;
+}
+
+#top .con .others .name-div p {
+  margin: 0;
+  color: #0000008a;
+}
+
+#top .con .others .name-div h2 {
+  margin: 0;
+}
+
+#top .con .others .xtras ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#top .con .others .xtras ul li {
+  list-style: none;
+  padding: .8rem;
+}
+
+#top .con .others .xtras ul li a {
+  text-decoration: none;
+  color: #0000008a;
+  font-size: medium;
+  font-weight: bold;
+}
+
+#top .con .others .xtras ul li a:hover {
+  cursor: pointer;
+  background: #0000008a;
+  color: #000;
+  padding: .8rem;
+}
+/* */
+
+@media (max-width: 414px) {
+  #top {
+    width: 95%;
+  }
+}
+

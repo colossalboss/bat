@@ -1,0 +1,36 @@
+#content {
+  width: 95%;
+  margin: auto;
+  background: #fff;
+}
+
+#content .con .trends {
+  padding: .5rem 1rem;
+}
+
+#content .con .trends h1 {
+  color: #1975d2;
+  font-weight: bold;
+}
+
+#content .con .trends ul {
+  padding: 0;
+  margin: 0;
+}
+
+#content .con .trends ul li {
+  /* width: 100%; */
+  list-style: none;
+  padding: 1rem 0;
+}
+
+#content .con .trends ul li i {
+  color: #1975d2;
+}
+
+#content .con .trends ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+}

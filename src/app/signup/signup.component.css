@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 90.6vh;
+  overflow: scroll;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.con i {
+  font-size: 45px;
+  color: #1da1f2;
+}
+
+#signup-form .con {
+  width: 55%;
+  padding: 1rem .5rem;
+  margin: 4% auto;
+  background: #fff;
+}
+
+#btn {
+  background: #1975d2;
+  width: 50%;
+  margin: auto;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+@media (min-width: 1024px) {
+  #signup-form .con {
+    width: 55%;
+    max-width: 688px;
+  }
+}
+
+@media (max-width: 414px) {
+  #signup-form .con {
+    width: 95%;
+  }
+}

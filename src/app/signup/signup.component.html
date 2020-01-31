@@ -1,0 +1,45 @@
+<main>
+  <section id="signup-form">
+    <div class="con">
+      <div class="icon">
+        <i class="fa fa-futbol-o" aria-hidden="true"></i>
+      </div>
+      <h1>Create your account</h1>
+
+      <div class="form-area">
+        <form>
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Enter your name" [formControl]="name" required>
+              <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your username" [formControl]="name" required>
+              <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your email" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input type="number" name="phone" class="form-control" matInput name="value" placeholder="Phone"
+                [formControl]="phone">
+            </mat-form-field>
+
+            <mat-form-field class="full-len">
+              <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" required>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" id="btn">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

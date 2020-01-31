@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+  flex: 1;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+.toolbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar {
+  padding: 0 .9rem 0 0;
+}
+
+.toolbar .brand-name {
+  font-size: larger;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spacer ul {
+  padding: 0;
+  margin: 0;
+}
+
+.spacer ul li {
+  list-style: none;
+  display: inline;
+  padding: .5rem;
+}
+
+.spacer ul li a {
+  color: #fff;
+}
+
+.spacer ul li.trends {
+  display: none;
+}
+
+.spacer ul li.standings {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.menu {
+  display: none;
+  font-size: 30px;
+}
+
+@media (max-width: 786px) {
+  .spacer ul li.trends {
+    display: inline-block;
+  }
+
+  .spacer {
+    display: flex;
+  }
+}
+
+@media (max-width: 415px) {
+  .spacer ul li.standings {
+    display: inline-block;
+  }
+
+  .toolbar {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toolbar img {
+    margin: 0;
+  }
+
+  .spacer {
+    display: none;
+    justify-content: center;
+  }
+
+  .spacer ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .spacer ul li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .spacer ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .brand {
+    align-self: flex-start;
+  }
+
+  .menu {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  .show {
+    display: flex;
+  }
+}

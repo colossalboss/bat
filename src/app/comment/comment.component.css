@@ -1,0 +1,106 @@
+/* Status Post */
+.con {
+  width: 100%;
+  margin: auto;
+  background: #fff;
+}
+
+.con .status-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.con .status-div .dp {
+  width: 8%;
+  padding: .5rem;
+}
+
+.con .status-div .dp:hover {
+  cursor: pointer;
+}
+
+.con .status-div .dp img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.con .status-div .field {
+  width: 90%;
+}
+
+.con .status-div .field form {
+  width: 100%;
+}
+
+.con .status-div .field form textarea {
+  width: 90%;
+  resize: vertical;
+  border: 0;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.con .status-div .field form textarea:focus {
+  outline: #fff;
+}
+
+.con .status-div .field form .btns-div {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+.con .status-div .field form .btns-div i {
+  font-size: 20px;
+  color: #1975d2;
+}
+
+.con .status-div .field form .btns-div .action-btn .post-btn {
+  padding: .3rem 1rem;
+  background: #1975d2;
+  color: #fff;
+  border-radius: 40%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.con .status-div .field form .btns-div .action-btn .post-btn:hover {
+  cursor: pointer;
+}
+
+.con .status-div .field form .btns-div .action-btn .post-btn:focus {
+  outline: #fff;
+}
+
+.con .status-div form #file {
+  display: none;
+}
+
+.con .status-div form label:hover {
+  cursor: pointer;
+}
+
+.cancel {
+  background: coral;
+  color: #fff;
+  border-radius: 40%;
+  padding: .5rem 1rem;
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.cancel:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .action-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cancel {
+    margin-top: 1rem;
+  }
+}

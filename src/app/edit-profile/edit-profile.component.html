@@ -1,0 +1,55 @@
+<main>
+  <section id="edit">
+    <div class="con">
+      <div class="form">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <div class="example-container">
+            <!-- <mat-form-field> -->
+              <div class="img-upload">
+                <input id="file" name="image" #inp type="file" [(ngModel)]="myImage">
+                <label for="file"><i class="fa fa-upload" (click)="inp.click"></i></label>
+              </div>
+            <!-- </mat-form-field> -->
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your name" name="name" [(formControl)]="name" required value="{{name1}}">
+              <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your username" name="username" [(formControl)]="username" required>
+              <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your location" name="location" [formControl]="location" required>
+              <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Enter your email" name="email" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input type="number" name="phone" class="form-control" matInput name="phone" placeholder="Phone"
+                [formControl]="phone">
+            </mat-form-field>
+
+            <mat-form-field class="full-len">
+              <input matInput placeholder="Enter your password" name="password" [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <div class="btns">
+              <button mat-raised-button color="primary" id="btn">Save</button>
+              <span class="close" (click)="onCancel()">Cancel</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

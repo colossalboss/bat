@@ -1,0 +1,30 @@
+<main>
+  <section id="top">
+    <div class="con">
+      <div class="icon">
+        <i class="fa fa-futbol-o" aria-hidden="true"></i>
+      </div>
+      <div class="login">
+        <a [routerLink]="['/login']">Log In</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro-text">
+    <div class="con">
+      <div class="text">
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, sit</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="sign-action">
+    <div class="con">
+      <div class="text">
+        <h4>Join BAT today.</h4>
+        <input class="btn b" type="button" [routerLink]="['/signup']" value="Sign Up"><br>
+        <button class="btn f" [routerLink]="['/login']">Log In</button>
+      </div>
+    </div>
+  </section>
+</main>

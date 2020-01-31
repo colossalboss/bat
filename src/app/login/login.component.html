@@ -1,0 +1,45 @@
+<main>
+  <section id="form-area">
+    <div class="con">
+      <div class="text">
+        <h2>Log in to BAT</h2>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Enter your email" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="full-len">
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" id="btn">Log In</button>
+          <span class="check">
+            <mat-checkbox class="example-margin" name="stayLogged" [(ngModel)]="checked">Remember me</mat-checkbox>
+          </span>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="other-options">
+    <div class="options">
+      <p>
+        New to BAT?
+        <span class="new-user">
+          <a [routerLink]="['/signup']">
+            Sign up now <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          </a>
+        </span>
+      </p>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 40%;
+  margin: 11% auto;
+}
+
+.con {
+  padding: .5rem;
+}
+
+#top .con {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1.2rem;
+}
+
+#top .con a {
+  text-decoration: none;
+  border: #1da1f2 1px solid;
+  padding: .5rem;
+  border-radius: 15px;
+  color: #1da1f2;
+  background: none;
+}
+
+#top .con i {
+  font-size: 45px;
+  color: #1da1f2;
+}
+
+#top .con .login {
+  display: flex;
+  align-self: center;
+}
+
+#intro-text {
+  margin: .9rem;
+}
+
+#sign-action .con h4  {
+  margin: .5rem;
+}
+
+#sign-action .con .btn {
+  width: 100%;
+  padding: .5rem;
+  margin: .5rem 0;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+#sign-action .con .btn:hover {
+  cursor: pointer;
+}
+
+#sign-action .con .b {
+  background: #1da1f2;
+  color: #fff;
+  outline: #1da1f2;
+}
+
+#sign-action .con .b:hover {
+  background: #0768a5;
+  color: #fff;
+}
+
+#sign-action .con .f {
+  background: none;
+  color: #1da1f2;
+  outline: #fff;
+}
+
+#sign-action .con .f:hover,
+#top .con .login a:hover {
+  background: rgba(204, 204, 204, 0.712);
+  color: #1da1f2;
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 40%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 60%;
+    margin: 25% auto;
+  }
+}
+
+@media (max-width: 414px) {
+  main {
+    width: 90%;
+    margin: 25% auto;
+  }
+}
