@@ -33,6 +33,19 @@ import { StandingsComponent } from './standings/standings.component';
 import { ThreadComponent } from './thread/thread.component';
 import { CommentComponent } from './comment/comment.component';
 
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angular4-social-login';
+
+
+// Client id for the google oauth. This is used for validation of our application to google.
+// https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin
+// tslint:disable-next-line:variable-name
+const google_oauth_client_id = '265064482755-hb258ueo3lls178lmg2ds3ivhi9vlkms.apps.googleusercontent.com';
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('265064482755-hb258ueo3lls178lmg2ds3ivhi9vlkms.apps.googleusercontent.com')
+  }
+]);
 
 
 @NgModule({
@@ -65,7 +78,8 @@ import { CommentComponent } from './comment/comment.component';
     MatButtonModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    SocialLoginModule.initialize(config)
   ],
   providers: [],
   bootstrap: [AppComponent],
