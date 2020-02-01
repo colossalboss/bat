@@ -255,6 +255,10 @@ color: #000;
   #main-content {
     width: 70%;
   }
+
+  #main-content .outcome {
+    width: 25px;
+  }
 }
 
 @media (max-width: 415px) {

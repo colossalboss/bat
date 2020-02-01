@@ -72,3 +72,9 @@ import { CommentComponent } from './comment/comment.component';
   entryComponents: [ProfileComponent, EditProfileComponent]
 })
 export class AppModule { }
+
+// Clien ID
+// 265064482755-hb258ueo3lls178lmg2ds3ivhi9vlkms.apps.googleusercontent.com
+
+// Client Secret
+// eLN_HhLkln3g4y2z2PkAC0FS
