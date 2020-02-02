@@ -52,4 +52,11 @@ export class LoginComponent implements OnInit {
     );
   }
 
+  // Method to log out.
+  signOut(): void {
+    this._socioAuthServ.signOut();
+    this.user = null;
+    console.log('User signed out.');
+  }
+
 }

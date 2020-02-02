@@ -40,10 +40,5 @@ export class AppComponent {
     );
   }
 
-  // Method to log out.
-  signOut(): void {
-    this._socioAuthServ.signOut();
-    this.user = null;
-    console.log('User signed out.');
-  }
+  
 }
