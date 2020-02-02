@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   checked = false;
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
+  /* TODO */
+  // Share user with other components
   user: any;
 
 
