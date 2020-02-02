@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
 
   // Method to sign in with google.
   singIn(platform: string): void {
+    console.log('Sign in starts');
+
     platform = GoogleLoginProvider.PROVIDER_ID;
     this._socioAuthServ.signIn(platform).then(
       (response) => {
@@ -54,6 +56,8 @@ export class LoginComponent implements OnInit {
 
   // Method to log out.
   signOut(): void {
+    console.log('Sign out starts');
+
     this._socioAuthServ.signOut();
     this.user = null;
     console.log('User signed out.');
