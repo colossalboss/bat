@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { AuthService, GoogleLoginProvider } from 'angular4-social-login';
 
 
 @Component({
@@ -12,10 +13,13 @@ export class LoginComponent implements OnInit {
   checked = false;
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
+  user: any;
 
 
 
-  constructor() { }
+  // tslint:disable-next-line:variable-name
+  constructor(private _socioAuthServ: AuthService) { }
+
 
   ngOnInit() {
     console.log(this.checked);
@@ -30,11 +34,22 @@ export class LoginComponent implements OnInit {
   onSignIn(googleUser) {
     // tslint:disable-next-line:prefer-const
     console.log('Hello');
-    let profile = googleUser.getBasicProfile();
+    const profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+
+  // Method to sign in with google.
+  singIn(platform: string): void {
+    platform = GoogleLoginProvider.PROVIDER_ID;
+    this._socioAuthServ.signIn(platform).then(
+      (response) => {
+        console.log(platform + ' logged in user data is= ' , response);
+        this.user = response;
+      }
+    );
   }
 
 }
