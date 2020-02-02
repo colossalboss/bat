@@ -17,6 +17,8 @@
         <li class="standings"><a [routerLink]="['standings']">Standings</a></li>
         <li><a [routerLink]="['signup']">Sign Up</a></li>
         <li><a [routerLink]="['login']">Log In</a></li>
+        <li><button class="signout-btn" [routerLink]="['login']" (click)="signOut();">Sign out</button></li>
+
       </ul>
     </div>
     <div class="menu">

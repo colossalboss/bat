@@ -65,6 +65,15 @@ main {
   color: #1975d2;
 }
 
+.signin-btn {
+  padding: .5rem;
+  background: #fff;
+  color: grey;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 @media (min-width: 1024px) {
   #form-area,
   #other-options {

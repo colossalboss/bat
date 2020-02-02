@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { AuthService, GoogleLoginProvider } from 'angular4-social-login';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
 
 
   // tslint:disable-next-line:variable-name
-  constructor(private _socioAuthServ: AuthService) { }
+  constructor(private _socioAuthServ: AuthService, private route: Router) { }
 
 
   ngOnInit() {
@@ -49,13 +50,17 @@ export class LoginComponent implements OnInit {
     this._socioAuthServ.signIn(platform).then(
       (response) => {
         console.log(platform + ' logged in user data is= ' , response);
+        if (response) {
+          this.route.navigate(['home']);
+        }
         this.user = response;
       }
     );
   }
 
   // Method to log out.
-  signOut(): void {
+  signOut(event): void {
+    event.preventDefault();
     console.log('Sign out starts');
 
     this._socioAuthServ.signOut();

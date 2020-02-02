@@ -90,6 +90,15 @@ a:hover {
   font-size: 30px;
 }
 
+.signout-btn {
+  padding: .5rem;
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
 @media (max-width: 786px) {
   .spacer ul li.trends {
     display: inline-block;

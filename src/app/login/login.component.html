@@ -41,10 +41,9 @@
         </span>
       </p>
       <div >
-        <button (click)="singIn('Google');">Sign in with Google</button><br /><br />
-        <button (click)="signOut();">Sign out</button><br /><br />
+        <button class="g-signin2 signin-btn" (click)="singIn('Google');">Sign in with Google</button><br /><br />
       </div>
-      <div class="g-signin2" (click)="signOut"></div>
+      <!-- <div class="g-signin2" (click)="signOut"></div> -->
       <!-- <div class="g-signin2" (data-onsuccess)="onSignIn" (click)="signIn"></div> -->
     </div>
   </section>
