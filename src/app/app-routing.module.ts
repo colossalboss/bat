@@ -12,6 +12,10 @@ import {TrendsComponent} from './trends/trends.component';
 import {StandingsComponent} from './standings/standings.component';
 import {ThreadComponent} from './thread/thread.component';
 import {CommentComponent} from './comment/comment.component';
+import {PostTipComponent} from './post-tip/post-tip.component';
+import {LeaguesComponent} from './leagues/leagues.component';
+import {FixturesComponent} from './fixtures/fixtures.component';
+import {TipComponent} from './tip/tip.component';
 
 
 const routes: Routes = [
@@ -21,6 +25,10 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'trends', component: TrendsComponent},
   {path: 'standings', component: StandingsComponent},
+  {path: 'post', component: PostTipComponent},
+  {path: 'leagues', component: LeaguesComponent},
+  {path: 'tip', component: TipComponent},
+  {path: 'fixtures', component: FixturesComponent},
   {path: 'profile', component: ProfileComponent,
   children: [
     {path: 'posts', component: UserPostsComponent},

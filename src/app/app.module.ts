@@ -12,6 +12,8 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule, NgModel} from
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule, MatCheckboxModule, MatProgressSpinnerModule, MatCardModule, MatMenuModule, MatIconModule} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialogConfig} from '@angular/material';
@@ -34,6 +36,10 @@ import { ThreadComponent } from './thread/thread.component';
 import { CommentComponent } from './comment/comment.component';
 
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angular4-social-login';
+import { PostTipComponent } from './post-tip/post-tip.component';
+import { LeaguesComponent } from './leagues/leagues.component';
+import { FixturesComponent } from './fixtures/fixtures.component';
+import { TipComponent } from './tip/tip.component';
 
 
 // Client id for the google oauth. This is used for validation of our application to google.
@@ -62,7 +68,11 @@ const config = new AuthServiceConfig([
     TrendsComponent,
     StandingsComponent,
     ThreadComponent,
-    CommentComponent
+    CommentComponent,
+    PostTipComponent,
+    LeaguesComponent,
+    FixturesComponent,
+    TipComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +89,8 @@ const config = new AuthServiceConfig([
     MatCheckboxModule,
     MatDialogModule,
     MatTableModule,
+    MatCardModule,
+    MatSelectModule,
     SocialLoginModule.initialize(config)
   ],
   providers: [],
