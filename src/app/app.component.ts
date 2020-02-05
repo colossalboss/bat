@@ -39,4 +39,10 @@ export class AppComponent {
       }
     );
   }
+
+  hide(nf): void {
+    if (nf.classList.contains('show')) {
+      nf.classList.remove('show');
+    }
+  }
 }

@@ -159,4 +159,8 @@ a:hover {
   .show {
     display: flex;
   }
+
+  .spacer ul li:focus  .spacer .show  {
+    display: none !important;
+  }
 }
