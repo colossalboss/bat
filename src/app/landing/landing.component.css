@@ -70,7 +70,7 @@ main {
 }
 
 #sign-action .con .f {
-  background: none;
+  background: #fff;
   color: #1da1f2;
   outline: #fff;
 }
@@ -79,6 +79,11 @@ main {
 #top .con .login a:hover {
   background: rgba(204, 204, 204, 0.712);
   color: #1da1f2;
+}
+
+#intro,
+#prompt {
+  font-size: 20px !important;
 }
 
 @media (min-width: 1024px) {

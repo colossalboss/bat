@@ -1,8 +1,20 @@
-mat-form-field {
-  width: 100%;
+mat-card{
+  margin: .5rem;
 }
 
 .post-btn {
   background: #1a75d2;
   color: #fff;
+}
+
+.grey {
+  background: grey !important;
+}
+
+.example-card mat-card-content:hover {
+  cursor: pointer;
+}
+
+mat-card-content a {
+  color: white;
 }

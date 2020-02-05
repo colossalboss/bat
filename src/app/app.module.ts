@@ -40,6 +40,8 @@ import { PostTipComponent } from './post-tip/post-tip.component';
 import { LeaguesComponent } from './leagues/leagues.component';
 import { FixturesComponent } from './fixtures/fixtures.component';
 import { TipComponent } from './tip/tip.component';
+import { PicksComponent } from './picks/picks.component';
+import { ThoughtComponent } from './thought/thought.component';
 
 
 // Client id for the google oauth. This is used for validation of our application to google.
@@ -72,7 +74,9 @@ const config = new AuthServiceConfig([
     PostTipComponent,
     LeaguesComponent,
     FixturesComponent,
-    TipComponent
+    TipComponent,
+    PicksComponent,
+    ThoughtComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TipsService} from '../tips.service';
+import {TipsModel} from '../tips.model';
 
 @Component({
   selector: 'app-fixtures',
@@ -19,9 +21,17 @@ export class FixturesComponent implements OnInit {
     'Bournemouth vs Aston Villa',
   ];
 
-  constructor() { }
+  broadCast: TipsModel;
+
+  constructor(private tipsService: TipsService) { }
 
   ngOnInit() {
+    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+
+    console.log(this.broadCast);
+    this.broadCast.verdict = 'Draw';
+    this.tipsService.updateBroadCast(this.broadCast);
+    console.log(this.broadCast);
   }
 
 }

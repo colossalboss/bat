@@ -16,6 +16,7 @@ import {PostTipComponent} from './post-tip/post-tip.component';
 import {LeaguesComponent} from './leagues/leagues.component';
 import {FixturesComponent} from './fixtures/fixtures.component';
 import {TipComponent} from './tip/tip.component';
+import {ThoughtComponent} from './thought/thought.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'standings', component: StandingsComponent},
   {path: 'post', component: PostTipComponent},
   {path: 'leagues', component: LeaguesComponent},
+  {path: 'tip/thoughts', component: ThoughtComponent},
   {path: 'tip', component: TipComponent},
   {path: 'fixtures', component: FixturesComponent},
   {path: 'profile', component: ProfileComponent,

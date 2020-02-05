@@ -1,0 +1,20 @@
+mat-card {
+  margin: .5rem;
+  width: 100% !important;
+}
+
+mat-card-content {
+  margin-bottom: 0;
+}
+
+mat-card-actions {
+  padding: 0;
+}
+
+mat-card-title {
+  margin-bottom: 0;
+}
+
+.car {
+  width: 100%;
+}
