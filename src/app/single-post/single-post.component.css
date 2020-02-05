@@ -24,3 +24,9 @@
   border: 1px solid #fff;
   max-width: 21px;
 }
+
+#user-image img {
+  width: 80%;
+  border-radius: 50%;
+  margin: auto;
+}
