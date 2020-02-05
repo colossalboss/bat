@@ -6,3 +6,12 @@ mat-card:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  #side2 {
+    display: none;
+  }
+
+  #side1 {
+    display: none;
+  }
+}

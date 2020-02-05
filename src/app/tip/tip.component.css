@@ -18,3 +18,13 @@ mat-card{
 mat-card-content a {
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  #side2 {
+    display: none;
+  }
+
+  #side1 {
+    display: none;
+  }
+}

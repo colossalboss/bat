@@ -25,3 +25,13 @@ mat-card-actions button {
   padding: 0;
   margin: 0 .5rem;
 }
+
+@media screen and (max-width: 768px) {
+  #side2 {
+    display: none;
+  }
+
+  #side1 {
+    display: none;
+  }
+}
