@@ -42,6 +42,8 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { TipComponent } from './tip/tip.component';
 import { PicksComponent } from './picks/picks.component';
 import { ThoughtComponent } from './thought/thought.component';
+import { SinglePostComponent } from './single-post/single-post.component';
+import { HomePostComponent } from './home-post/home-post.component';
 
 
 // Client id for the google oauth. This is used for validation of our application to google.
@@ -76,7 +78,9 @@ const config = new AuthServiceConfig([
     FixturesComponent,
     TipComponent,
     PicksComponent,
-    ThoughtComponent
+    ThoughtComponent,
+    SinglePostComponent,
+    HomePostComponent
   ],
   imports: [
     BrowserModule,

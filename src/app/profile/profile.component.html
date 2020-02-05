@@ -1,32 +1,90 @@
-<main>
-  <section id="top">
-    <div class="con">
-      <div class="profile-img">
-        <div class="image">
-          <img src="https://pbs.twimg.com/profile_images/1048247942006689792/eLkgGbom_bigger.jpg" alt="Profile Pic">
-        </div>
-        <div class="edit-div">
-          <!-- <a [routerLink]="['/edit']">Edit</a> -->
-          <button class="edit-btn" mat-raised-button (click)="openDialog()">Edit profile</button>
-        </div>
-      </div>
-      <div class="others">
-        <div class="name-div">
-          <div class="handles">
-            <h2>Ogbara Godstar</h2>
-            <p>@Username</p>
-          </div>
-        </div>
-        <div class="xtras">
-          <ul>
-            <li><a (click)="showPosts()">Posts</a></li>
-            <li><a (click)="showMedia()">Media</a></li>
-            <li><a href="#">Likes</a></li>
-          </ul>
-        </div>
-        <hr>
-      </div>
-      <router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 p-container" id="trends-section">
+      <app-trends></app-trends>
     </div>
-  </section>
-</main>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 p-container">
+      <section id="top">
+        <div class="con">
+          <div class="profile-img">
+            <div class="image">
+              <img [src]="userDetails.photoUrl" alt="Profile Pic">
+              <!-- <img src="https://pbs.twimg.com/profile_images/1048247942006689792/eLkgGbom_bigger.jpg" alt="Profile Pic"> -->
+            </div>
+            <div class="edit-div">
+              <button class="edit-btn" mat-raised-button (click)="openDialog()">Edit profile</button>
+            </div>
+          </div>
+          <div class="others">
+            <div class="name-div">
+              <div class="handles">
+                <h2>{{ userDetails.name }} name</h2>
+                <p>@Username</p>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 bg-light mt-4">
+                  <h4>Streak</h4>
+                    <div class="row" id="user-streak">
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                      <div class="col-lg-1 col-md-1 col-sm-2 streak-item d-flex justify-content-center"><span>W</span></div>
+                    </div>
+                </div>
+
+                <div class="row ml-0 mt-4 percent">
+                  <div class="card percent">
+                    <table>
+                      <thead>
+                        <td>Posts</td>
+                        <td>Wins</td>
+                        <td>Losses</td>
+                        <td>%</td>
+                        <td>Streak</td>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>99+</td>
+                          <td>99+</td>
+                          <td>99+</td>
+                          <td>99+</td>
+                          <td>99+</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <app-single-post></app-single-post>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-3 p-container" id="standings-section">
+      <app-standings></app-standings>
+    </div>
+  </div>
+</div>

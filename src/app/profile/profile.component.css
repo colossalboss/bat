@@ -4,7 +4,7 @@ main {
 }
 
 #top {
-  width: 50%;
+  width: 100%;
   background: #fff;
   margin: auto;
 }
@@ -86,9 +86,45 @@ main {
 }
 /* */
 
+/* Update */
+.streak-item {
+  background: green;
+  border: 1px solid #fff;
+  max-width: 21px;
+}
+
+.percent {
+  width: 100%;
+}
+
+.p-container {
+  padding: 0;
+}
+
+#user-streak {
+  padding: .5rem;
+}
+
+@media (max-width: 768px) {
+  #trends-section,
+  #standings-section {
+    display: none;
+  }
+
+  #user-streak {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #user-streak div {
+    width: 30px;
+  }
+}
+/* */
+
 @media (max-width: 414px) {
   #top {
-    width: 95%;
+    width: 100%;
   }
 }
 

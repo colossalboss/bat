@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #e6ecf0;}
+
+@media (max-width: 768px) {
+  #trends-section,
+  #standings-section {
+    display: none;
+  }
+}

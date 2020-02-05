@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { AuthService, GoogleLoginProvider } from 'angular4-social-login';
 import {Router} from '@angular/router';
+import {LoginService} from '../login.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
 
 
   // tslint:disable-next-line:variable-name
-  constructor(private _socioAuthServ: AuthService, private route: Router) { }
+  constructor(private _socioAuthServ: AuthService, private route: Router, private loginService: LoginService) { }
 
 
   ngOnInit() {
@@ -32,16 +33,6 @@ export class LoginComponent implements OnInit {
     return this.email.hasError('required') ? 'You must enter a value' :
         this.email.hasError('email') ? 'Not a valid email' :
             '';
-  }
-
-  onSignIn(googleUser) {
-    // tslint:disable-next-line:prefer-const
-    console.log('Hello');
-    const profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
 
   // Method to sign in with google.
@@ -56,6 +47,7 @@ export class LoginComponent implements OnInit {
           this.route.navigate(['home']);
         }
         this.user = response;
+        this.loginService.updateUserDetails(response);
       }
     );
   }

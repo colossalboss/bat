@@ -1,0 +1,26 @@
+.container-fluid {
+  padding: 0;
+}
+
+.p2 {
+  padding: .5rem;
+}
+
+#post-actions {
+  width: 100% !important;
+  padding: 0 1rem 0 0;
+}
+
+#post-actions button {
+  font-size: 12px;
+}
+
+#single-post {
+  padding: 0 0.8rem;
+}
+
+#single-post div {
+  background: green;
+  border: 1px solid #fff;
+  max-width: 21px;
+}

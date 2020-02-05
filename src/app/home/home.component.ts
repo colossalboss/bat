@@ -5,6 +5,7 @@ import {PostDetails} from '../post-details';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatDialogConfig} from '@angular/material';
 import {CommentComponent} from '../comment/comment.component';
+import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-home',
@@ -23,8 +24,9 @@ export class HomeComponent implements OnInit {
   };
 
   comment;
+  userDetails;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private loginService: LoginService) { }
 
   ngOnInit() {
   }

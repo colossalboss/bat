@@ -3,6 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {MatDialogConfig} from '@angular/material';
 import {EditProfileComponent} from '../edit-profile/edit-profile.component';
 import {Router, Routes, ActivatedRoute} from '@angular/router';
+import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,13 +14,17 @@ export class ProfileComponent implements OnInit {
 
   animal: any;
   name: string;
+  userDetails;
 
   constructor(public dialog: MatDialog,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private loginService: LoginService) { }
 
   ngOnInit() {
-    this.router.navigate(['posts'], {relativeTo: this.route});
+    // this.router.navigate(['posts'], {relativeTo: this.route});
+    this.loginService.brodCast.subscribe(broadCast => this.userDetails = broadCast);
+
   }
 
   openDialog(): void {
