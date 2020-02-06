@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TipsService} from '../tips.service';
 import {TipsModel} from '../tips.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-leagues',
@@ -17,15 +18,19 @@ export class LeaguesComponent implements OnInit {
     'National'
   ];
 
-  constructor(private tipsService: TipsService) { }
+  constructor(private tipsService: TipsService, private router: Router) { }
 
     broadCast: TipsModel;
 
   ngOnInit() {
-    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
-    console.log('Hey');
-    console.log(this.broadCast);
   }
 
-
+  getNext(league): void {
+    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+    this.broadCast.league = league;
+    console.log(this.broadCast);
+    this.tipsService.updateBroadCast(this.broadCast);
+    console.log(this.broadCast);
+    this.router.navigate(['fixtures']);
+  }
 }

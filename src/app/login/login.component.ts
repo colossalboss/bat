@@ -47,7 +47,10 @@ export class LoginComponent implements OnInit {
           this.route.navigate(['home']);
         }
         this.user = response;
-        this.loginService.updateUserDetails(response);
+        if (this.user) {
+          this.loginService.updateUserDetails(response);
+          this.loginService.updateBroadCastMessage(true);
+        }
       }
     );
   }

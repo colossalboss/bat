@@ -15,7 +15,7 @@
         <!-- <li><a href="#">Contact</a></li> -->
         <li class="trends" (click)="hide(nf)"><a [routerLink]="['trends']">Trending</a></li>
         <li class="standings"><a [routerLink]="['standings']" (click)="hide(nf)">Standings</a></li>
-        <li ><a [routerLink]="['post']" (click)="hide(nf)">Post tip</a></li>
+        <li><a [routerLink]="['post']" (click)="hide(nf)">Post tip</a></li>
         <li><a [routerLink]="['signup']" (click)="hide(nf)">Sign Up</a></li>
         <li><a [routerLink]="['login']" (click)="hide(nf)">Log In</a></li>
         <li (click)="hide(nf)"><button class="signout-btn" [routerLink]="['login']" (click)="signOut();">Sign out</button></li>
@@ -28,5 +28,19 @@
     </div>
   </div>
 
-<router-outlet></router-outlet>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-3" id="trends-section">
+        <app-trends></app-trends>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="col-lg-3 col-md-3" id="standings-section">
+        <app-standings></app-standings>
+      </div>
+    </div>
+  </div>
 <script src="https://apis.google.com/js/platform.js" async defer></script>

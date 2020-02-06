@@ -1,12 +1,12 @@
 <div class="container-fluid mt-2 mb-2" *ngFor="let post of posts">
   <div class="card p-2">
     <div class="container-fluid bg-light">
-      <div class="row">
+      <div class="row full">
         <div class="col-2">
           <img src="../../../../Desktop/harmony.png" alt="User Image">
         </div>
-        <div class="col-10">
-          <div class="row d-flex justify-content-between">
+        <div class="col-10 full no-p">
+          <div class="row d-flex justify-content-between full">
             <div class="col-3 d-flex align-self-center justify-content-start p-0">
               <!-- <p>Username</p> -->
               <p>{{post.username}}</p>
@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12 p4">
+              <div class="col-lg-12 col-md-12 col-sm-12 p4">
                 <p class="p2">{{ post.thought }}</p>
                 <!-- <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum odit, libero soluta iste doloribus nam accusamus deserunt dicta asperiores sequi.</p> -->
               </div>

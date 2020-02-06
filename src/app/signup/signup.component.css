@@ -22,7 +22,7 @@ main {
 }
 
 #signup-form .con {
-  width: 55%;
+  width: 90%;
   padding: 1rem .5rem;
   margin: 4% auto;
   background: #fff;
@@ -38,7 +38,7 @@ main {
 
 @media (min-width: 1024px) {
   #signup-form .con {
-    width: 55%;
+    width: 90%;
     max-width: 688px;
   }
 }

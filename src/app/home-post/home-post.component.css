@@ -7,6 +7,15 @@
   padding: .5rem;
 }
 
+/* .full {
+  width: 100%;
+} */
+
+/* .no-p {
+  padding: 0;
+  margin: 0;
+} */
+
 #post-actions {
   width: 100% !important;
   padding: 0 1rem;

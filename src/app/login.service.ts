@@ -16,11 +16,18 @@ export class LoginService {
   };
 
   private details = new BehaviorSubject(this.userDetails);
+  private signed = new BehaviorSubject(false);
 
-brodCast = this.details.asObservable();
+  brodCast = this.details.asObservable();
+  brodCastMessage = this.signed.asObservable();
+
   constructor() { }
 
   updateUserDetails(value): void {
     this.details.next(value);
+  }
+
+  updateBroadCastMessage(value): void {
+    this.signed.next(value);
   }
 }

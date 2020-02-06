@@ -109,6 +109,24 @@ a:hover {
   }
 }
 
+/* Sidebars */
+@media (max-width: 768px) {
+  #trends-section,
+  #standings-section {
+    display: none;
+  }
+
+  #user-streak {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #user-streak div {
+    width: 30px;
+  }
+}
+/*  */
+
 @media (max-width: 415px) {
   .spacer ul li.standings {
     display: inline-block;

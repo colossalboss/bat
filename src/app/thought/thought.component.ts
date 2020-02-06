@@ -20,14 +20,22 @@ export class ThoughtComponent implements OnInit {
   ngOnInit() {
     this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
     this.post = this.broadCast.country + ' - ' + this.broadCast.league + ' - ' + this.broadCast.fixture + ' #' + this.broadCast.verdict;
-    console.log(this.post);
   }
 
   onSubmit(): void {
     this.broadCast.thought = this.text;
     this.tipsService.updateBroadCast(this.broadCast);
 
-    this.router.navigate(['/profile']);
+    const isValid = this.broadCast.country && this.broadCast.league && this.broadCast.fixture && this.broadCast.verdict ? true : false;
+    if (isValid) {
+      this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+      this.broadCast.thought = this.text;
+      this.tipsService.updateBroadCast(this.broadCast);
+      this.router.navigate(['/profile']);
+    } else {
+      this.router.navigate(['post']);
+    }
+
   }
 
 }

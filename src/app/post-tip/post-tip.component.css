@@ -10,6 +10,11 @@ mat-card:hover {
   padding: 0;
 }
 
+.inherit {
+  width: inherit;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   #side2 {
     display: none;

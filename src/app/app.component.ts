@@ -4,6 +4,7 @@ import { AuthService, GoogleLoginProvider } from 'angular4-social-login';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {LoginService} from './login.service';
 
 
 @Component({
@@ -16,9 +17,14 @@ export class AppComponent {
 
   show: boolean;
   user: any;
+  signedIn: boolean = false;
 
   // tslint:disable-next-line:variable-name
-  constructor(private _socioAuthServ: AuthService) { }
+  constructor(private _socioAuthServ: AuthService, private loginService: LoginService) { }
+
+  ngOnInit() {
+    this.loginService.brodCastMessage.subscribe(broadCast => this.signedIn = broadCast);
+  }
 
   toggleVissibility(nf) {
     // nf.classList();

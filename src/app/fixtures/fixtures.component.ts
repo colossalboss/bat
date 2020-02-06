@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TipsService} from '../tips.service';
 import {TipsModel} from '../tips.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-fixtures',
@@ -23,15 +24,18 @@ export class FixturesComponent implements OnInit {
 
   broadCast: TipsModel;
 
-  constructor(private tipsService: TipsService) { }
+  constructor(private tipsService: TipsService, private router: Router) { }
 
   ngOnInit() {
-    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+  }
 
+  getNext(fixture): void {
+    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+    this.broadCast.fixture = fixture;
     console.log(this.broadCast);
-    this.broadCast.verdict = 'Draw';
     this.tipsService.updateBroadCast(this.broadCast);
     console.log(this.broadCast);
+    this.router.navigate(['tip']);
   }
 
 }

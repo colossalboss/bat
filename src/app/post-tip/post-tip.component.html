@@ -1,11 +1,11 @@
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-3 col-md-3" id="trends-section">
+  <div class="row inherit">
+    <!-- <div class="col-lg-3 col-md-3" id="trends-section">
       <app-trends></app-trends>
-    </div>
+    </div> -->
 
-    <div class="container col-lg-6 col-md-12" id="main">
+    <div class=" col-lg-12 col-md-12  col-sm-12" id="main">
       <div class="row">
         <div class="car"  style="width: 100%">
           <mat-card class="example-card" *ngFor="let country of countries">
@@ -14,8 +14,8 @@
               <mat-card-title>Shiba Inu</mat-card-title>
               <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
             </mat-card-header>
-            <mat-card-content style="width: 100%">
-              <a [routerLink]="['/leagues']">
+            <mat-card-content>
+              <a (click)="getNext(country)">
                 <p class="p-width">
                   {{ country }}
                 </p>
@@ -30,9 +30,9 @@
         </div>
       </div>
     </div>
-
+<!--
     <div class="col-lg-3 col-md-3" id="standings-section">
       <app-standings></app-standings>
-    </div>
+    </div> -->
   </div>
 </div>

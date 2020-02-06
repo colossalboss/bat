@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TipsService} from '../tips.service';
 import {TipsModel} from '../tips.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-post-tip',
@@ -28,15 +29,20 @@ export class PostTipComponent implements OnInit {
 
   broadCast: TipsModel;
 
-  constructor(private tipsService: TipsService) { }
+  constructor(private router: Router, private tipsService: TipsService) { }
 
   ngOnInit() {
-    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
 
+  }
+
+  getNext(country): void {
+    this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
+    this.tipsObj.country = country;
     console.log(this.broadCast);
     this.broadCast = this.tipsObj;
     this.tipsService.updateBroadCast(this.broadCast);
     console.log(this.broadCast);
+    this.router.navigate(['leagues']);
   }
 
 }

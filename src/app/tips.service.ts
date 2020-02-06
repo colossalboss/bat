@@ -8,11 +8,11 @@ import {TipsModel} from './tips.model';
 export class TipsService {
 
   tipsObj: TipsModel = {
-    country: 'Nigeria',
-    league: 'NPL',
-    fixture: 'Enyimba vs Sharks',
-    verdict: 'Nigeria',
-    thought: 'Nigeria',
+    country: '',
+    league: '',
+    fixture: '',
+    verdict: '',
+    thought: '',
   };
 
   private broadcastMessage = new BehaviorSubject(this.tipsObj);

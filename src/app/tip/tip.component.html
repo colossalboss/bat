@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-3 col-md-3" id="side1">
+    <!-- <div class="col-lg-3 col-md-3" id="side1">
       <app-trends></app-trends>
-    </div>
+    </div> -->
 
-    <div class="container col-lg-6 col-md-6 col-sm-12">
+    <div class="container col-lg-12 col-md-12 col-sm-12">
       <div class="row">
-        <div class="car"  style="width: 100%">
+        <div class="car" style="width: 100%">
 
           <mat-card class="example-card">
             <mat-card-header>
@@ -22,8 +22,8 @@
               <!-- <mat-card-title>{{ fixture }}</mat-card-title> -->
               <mat-card-subtitle>{{ pick.title }}</mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content (click)="predict(p)" style="width: 100%" *ngFor="let p of pick.options" class="grey bg-dark light">
-              <a [routerLink]="['thoughts']">
+            <mat-card-content (click)="getNext(p)" style="width: 100%" *ngFor="let p of pick.options" class="grey bg-dark light">
+              <a>
                 <p class="p4">{{ p }}</p>
               </a>
             </mat-card-content>
@@ -37,9 +37,9 @@
       </div>
     </div>
 
-    <div class="col-lg-3 col-md-3" id="side2">
+    <!-- <div class="col-lg-3 col-md-3" id="side2">
       <app-standings></app-standings>
-    </div>
+    </div> -->
   </div>
 </div>
 
