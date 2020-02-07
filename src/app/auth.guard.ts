@@ -8,19 +8,19 @@ import {LoginService} from './login.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  public loggedIn: Observable<boolean>;
+  public broadCast;
   constructor(private authService: AuthService, private router: Router, private loginService: LoginService) { }
 
   public canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean  {
 
-      this.loginService.brodCastMessage.subscribe((broadCast: any) => this.loggedIn = broadCast);
-      if (this.loggedIn) {
-        return this.loggedIn;
+      this.loginService.brodCastMessage.subscribe((broadCast: any) => this.broadCast = broadCast);
+      if (this.broadCast) {
+        return this.broadCast;
       } else {
         this.router.navigate(['login']);
-        return this.loggedIn;
+        return this.broadCast;
       }
   }
 
