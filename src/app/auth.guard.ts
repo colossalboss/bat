@@ -24,9 +24,4 @@ export class AuthGuard implements CanActivate {
       }
   }
 
-  checkLogin(): boolean {
-
-    return true;
-  }
-
 }
