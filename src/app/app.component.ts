@@ -5,6 +5,7 @@ import { AuthService, GoogleLoginProvider } from 'angular4-social-login';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {LoginService} from './login.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AppComponent {
   user: any;
 
   // tslint:disable-next-line:variable-name
-  constructor(private _socioAuthServ: AuthService, private loginService: LoginService) { }
+  constructor(private _socioAuthServ: AuthService, private loginService: LoginService, private router: Router) { }
 
   toggleVissibility(nf) {
     // nf.classList();
@@ -48,6 +49,7 @@ export class AppComponent {
 
     this._socioAuthServ.signOut();
     this.user = null;
+    this.router.navigate(['login']);
     console.log('User signed out.');
   }
 
