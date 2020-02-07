@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import {AuthService} from 'angular4-social-login';
 import {LoginService} from './login.service';
 
 @Injectable({
@@ -9,7 +8,7 @@ import {LoginService} from './login.service';
 })
 export class AuthGuard implements CanActivate {
   public broadCast;
-  constructor(private authService: AuthService, private router: Router, private loginService: LoginService) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   public canActivate(
     route: ActivatedRouteSnapshot,

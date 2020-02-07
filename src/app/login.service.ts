@@ -7,8 +7,8 @@ import {BehaviorSubject} from 'rxjs';
 export class LoginService {
 
   userDetails = {
-    id: "",
-    name: "",
+    id: '',
+    name: '',
     email: '',
     photoUrl: '',
     authToken: '',
