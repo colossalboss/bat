@@ -43,7 +43,6 @@ export class LoginComponent implements OnInit {
     this._socioAuthServ.signIn(platform).then(
       (response) => {
         console.log(platform + ' logged in user data is= ' , response);
-
         this.user = response;
       }
     );
