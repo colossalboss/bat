@@ -43,14 +43,15 @@ export class LoginComponent implements OnInit {
     this._socioAuthServ.signIn(platform).then(
       (response) => {
         console.log(platform + ' logged in user data is= ' , response);
-        if (response) {
-          this.loginService.updateUserDetails(response);
-          this.loginService.updateBroadCastMessage(true);
-          this.route.navigate(['home']);
-        }
+
         this.user = response;
       }
     );
+    if (this.user) {
+      this.loginService.updateUserDetails(this.user);
+      this.loginService.updateBroadCastMessage(true);
+      this.route.navigate(['home']);
+    }
   }
 
   // Method to log out.
