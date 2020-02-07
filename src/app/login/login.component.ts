@@ -60,6 +60,7 @@ export class LoginComponent implements OnInit {
 
     this._socioAuthServ.signOut();
     this.user = null;
+    this.loginService.updateBroadCastMessage(false);
     console.log('User signed out.');
   }
 
