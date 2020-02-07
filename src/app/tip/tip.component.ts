@@ -35,6 +35,7 @@ export class TipComponent implements OnInit {
   constructor(private tipsService: TipsService, private router: Router) { }
 
   ngOnInit() {
+    // Test
     this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
     this.fixture = this.broadCast.fixture;
     if (!this.fixture) {
