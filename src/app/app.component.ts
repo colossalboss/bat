@@ -19,8 +19,15 @@ export class AppComponent {
   show: boolean;
   user: any;
 
+  loggedIn;
+
   // tslint:disable-next-line:variable-name
   constructor(private _socioAuthServ: AuthService, private loginService: LoginService, private router: Router) { }
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnInit() {
+    this.loginService.brodCastMessage.subscribe(response => this.loggedIn = response);
+  }
 
   toggleVissibility(nf) {
     // nf.classList();
@@ -49,6 +56,7 @@ export class AppComponent {
 
     this._socioAuthServ.signOut();
     this.user = null;
+    this.loginService.updateBroadCastMessage(false);
     this.router.navigate(['login']);
     console.log('User signed out.');
   }

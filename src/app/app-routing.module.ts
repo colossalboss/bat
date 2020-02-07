@@ -34,7 +34,7 @@ const routes: Routes = [
   {path: 'tip/thoughts', component: ThoughtComponent},
   {path: 'tip', component: TipComponent},
   {path: 'fixtures', component: FixturesComponent},
-  {path: 'profile', component: ProfileComponent,  canActivate: [AuthGuard],
+  {path: 'profile', component: ProfileComponent,
   children: [
     {path: 'posts', component: UserPostsComponent},
     {path: 'media', component: UserMediaComponent}
