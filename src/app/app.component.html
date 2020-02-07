@@ -18,7 +18,7 @@
           <li class="standings"><a [routerLink]="['standings']" (click)="hide(nf)">Standings</a></li>
           <li><a [routerLink]="['post']" (click)="hide(nf)">Post tip</a></li>
           <li><a [routerLink]="['signup']" (click)="hide(nf)">Sign Up</a></li>
-          <li (click)="onSet()"><a [routerLink]="['login']" (click)="hide(nf)">Log In</a></li>
+          <li><a [routerLink]="['login']" (click)="hide(nf)">Log In</a></li>
           <li (click)="hide(nf)" *ngIf="loggedIn"><button class="signout-btn"(click)="signOut($event);">Sign out</button></li>
           <li *ngIf="loggedIn"><a [routerLink]="['profile']" (click)="hide(nf)">Profile</a></li>
 
