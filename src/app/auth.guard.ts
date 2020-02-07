@@ -27,12 +27,13 @@ export class AuthGuard implements CanActivate {
       this._socioAuthServ.authState.subscribe(response => {
         if (response) {
           this.broadCast = false;
+          console.log(' false AuthState is' + response);
         } else {
           this.router.navigate(['login']);
           this.broadCast = true;
+          console.log('true AuthState is' + response);
         }
       });
-      
       return this.broadCast;
   }
 
