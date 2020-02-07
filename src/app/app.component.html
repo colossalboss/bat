@@ -19,7 +19,7 @@
           <li><a [routerLink]="['post']" (click)="hide(nf)">Post tip</a></li>
           <li><a [routerLink]="['signup']" (click)="hide(nf)">Sign Up</a></li>
           <li><a [routerLink]="['login']" (click)="hide(nf)">Log In</a></li>
-          <li (click)="hide(nf)"><button class="signout-btn" [routerLink]="['login']" (click)="signOut();">Sign out</button></li>
+          <li (click)="hide(nf)"><button class="signout-btn" [routerLink]="['login']" (click)="signOut($event);">Sign out</button></li>
           <li><a [routerLink]="['profile']" (click)="hide(nf)">Profile</a></li>
 
         </ul>

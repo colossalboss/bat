@@ -17,14 +17,9 @@ export class AppComponent {
 
   show: boolean;
   user: any;
-  signedIn: boolean = false;
 
   // tslint:disable-next-line:variable-name
   constructor(private _socioAuthServ: AuthService, private loginService: LoginService) { }
-
-  ngOnInit() {
-    this.loginService.brodCastMessage.subscribe(broadCast => this.signedIn = broadCast);
-  }
 
   toggleVissibility(nf) {
     // nf.classList();
@@ -44,6 +39,16 @@ export class AppComponent {
         this.user = response;
       }
     );
+  }
+
+  // Method to log out.
+  signOut(event): void {
+    event.preventDefault();
+    console.log('Sign out starts');
+
+    this._socioAuthServ.signOut();
+    this.user = null;
+    console.log('User signed out.');
   }
 
   hide(nf): void {
