@@ -32,6 +32,7 @@ export class AuthGuard implements CanActivate {
           this.broadCast = true;
         }
       });
+      
       return this.broadCast;
   }
 
