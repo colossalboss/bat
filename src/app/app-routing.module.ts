@@ -22,7 +22,6 @@ import {AuthGuard} from './auth.guard';
 
 
 const routes: Routes = [
-  // {path: 'landing', component: LandingComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
