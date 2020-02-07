@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'trends', component: TrendsComponent},
   {path: 'standings', component: StandingsComponent},
-  {path: 'post', component: PostTipComponent},
+  {path: 'post', component: PostTipComponent, canActivate: [AuthGuard]},
   {path: 'single', component: SinglePostComponent},
   {path: 'leagues', component: LeaguesComponent},
   {path: 'tip/thoughts', component: ThoughtComponent},
