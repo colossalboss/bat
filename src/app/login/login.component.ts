@@ -44,11 +44,13 @@ export class LoginComponent implements OnInit {
       (response) => {
         console.log(platform + ' logged in user data is= ' , response);
         if (response) {
-          this.loginService.updateUserDetails(response);
-          this.loginService.updateBroadCastMessage(true);
           this.route.navigate(['home']);
         }
         this.user = response;
+        if (this.user) {
+          this.loginService.updateUserDetails(response);
+          this.loginService.updateBroadCastMessage(true);
+        }
       }
     );
   }
