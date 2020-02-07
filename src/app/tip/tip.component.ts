@@ -37,6 +37,9 @@ export class TipComponent implements OnInit {
   ngOnInit() {
     this.tipsService.broadCast.subscribe(broadCast => this.broadCast = broadCast);
     this.fixture = this.broadCast.fixture;
+    if (!this.fixture) {
+      this.router.navigate(['post']);
+    }
   }
 
   predict(x: string): void {

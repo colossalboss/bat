@@ -18,11 +18,12 @@ import {FixturesComponent} from './fixtures/fixtures.component';
 import {TipComponent} from './tip/tip.component';
 import {ThoughtComponent} from './thought/thought.component';
 import {SinglePostComponent} from './single-post/single-post.component';
+import {AuthGuard} from './auth.guard';
 
 
 const routes: Routes = [
-  {path: 'landing', component: LandingComponent},
-  {path: 'home', component: HomeComponent},
+  // {path: 'landing', component: LandingComponent},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'trends', component: TrendsComponent},
@@ -41,7 +42,8 @@ const routes: Routes = [
   },
   {path: 'edit', component: CommentComponent},
   {path: 'thread', component: ThreadComponent},
-  {path: '', redirectTo: 'landing', pathMatch: 'full'}
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({

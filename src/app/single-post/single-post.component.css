@@ -3,12 +3,20 @@
 }
 
 .p2 {
-  padding: .5rem;
+  /* padding: .5rem; */
+}
+
+.no-p {
+  padding: 0 !important;
+}
+
+.j-text {
+  text-align: justify;
 }
 
 #post-actions {
-  width: 100% !important;
-  padding: 0 1rem 0 0;
+  /* width: 100% !important; */
+  /* padding: 0 1rem 0 0; */
 }
 
 #post-actions button {
@@ -16,7 +24,7 @@
 }
 
 #single-post {
-  padding: 0 0.8rem;
+  padding: 0;
 }
 
 #single-post div {
@@ -29,4 +37,8 @@
   width: 80%;
   border-radius: 50%;
   margin: auto;
+}
+
+.row {
+  margin: 0;
 }

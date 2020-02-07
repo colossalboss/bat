@@ -1,17 +1,16 @@
 <div class="container-fluid mt-2 mb-2" *ngFor="let post of posts">
   <div class="card p-2">
     <div class="container-fluid bg-light">
-      <div class="row full">
-        <div class="col-2">
-          <img src="../../../../Desktop/harmony.png" alt="User Image">
+      <div class="row">
+        <div class="col-2" id="user-image">
+          <img [src]="post.image" alt="User Image">
         </div>
-        <div class="col-10 full no-p">
-          <div class="row d-flex justify-content-between full">
+        <div class="col-10"> <!-- End 10 -->
+          <div class="row d-flex justify-content-between">
             <div class="col-3 d-flex align-self-center justify-content-start p-0">
-              <!-- <p>Username</p> -->
               <p>{{post.username}}</p>
             </div>
-            <div class="col-9">
+            <div class="col-9 no-p">
               <div class="row d-flex justify-content-end" id="single-post">
                 <div class="col-1 p-0 d-flex justify-content-center"><span>W</span></div>
                 <div class="col-1 p-0 d-flex justify-content-center"><span>W</span></div>
@@ -25,32 +24,27 @@
                 <div class="col-1 p-0 d-flex justify-content-center"><span>W</span></div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 p4">
-                <p class="p2">{{ post.thought }}</p>
-                <!-- <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum odit, libero soluta iste doloribus nam accusamus deserunt dicta asperiores sequi.</p> -->
-              </div>
-              <div class="row" id="post-actions">
-                <!-- <div class="col-12 d-flex justify-content-between"> -->
-                  <div class="col-4">
-                    <!-- <button class="btn btn-primary">45  <i class="fa fa-heart"></i> <span class="bg-screen">Likes</span></button> -->
-                    <button class="btn btn-default">{{post.likes}}  <i class="fa fa-heart"></i></button>
-                  </div>
-                  <div class="col-4 mr-1">
-                    <button class="btn btn-default">{{ post.Comment }}  <i class="fa fa-comment"></i></button>
-                    <!-- <button class="btn btn-primary">45  <i class="fa fa-comment"></i> <span class="bg-screen">Comment</span></button> -->
-                  </div>
-                  <div class="col-2">
-                    <button class="btn btn-default"><i class="fa fa-facebook-official"></i></button>
-                  </div>
-                  <div class="col-1">
-                    <button class="btn btn-default "><i class="fa fa-twitter"></i></button>
-                  </div>
-                <!-- </div> -->
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 no-p j-text">
+              <p class="p2">{{ post.thought }}</p>
             </div>
           </div>
-        </div>
+          <div class="row" id="post-actions">
+              <div class="col-4 no-p">
+                <button class="btn btn-default">{{post.likes}}  <i class="fa fa-heart"></i></button>
+              </div>
+              <div class="col-4 no-p mr-1">
+                <button class="btn btn-default">{{ post.Comment }}  <i class="fa fa-comment"></i></button>
+              </div>
+              <div class="col-2 no-p">
+                <button class="btn btn-default"><i class="fa fa-facebook-official"></i></button>
+              </div>
+              <div class="col-1 no-p">
+                <button class="btn btn-default"><i class="fa fa-twitter"></i></button>
+              </div>
+          </div>
+        </div><!-- End 12 -->
       </div>
     </div>
   </div>

@@ -19,6 +19,29 @@
             </mat-card-content>
           </mat-card>
 
+          <mat-card class="example-card" *ngFor="let fixture of fixtures">
+            <mat-card-header>
+            </mat-card-header>
+            <mat-card-content style="width: 100%">
+              <a (click)="getNext(fixture)">
+                <p class="p-width">
+                  {{ fixture }}
+                </p>
+              </a>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="example-card" *ngFor="let fixture of fixtures">
+            <mat-card-header>
+            </mat-card-header>
+            <mat-card-content style="width: 100%">
+              <a (click)="getNext(fixture)">
+                <p class="p-width">
+                  {{ fixture }}
+                </p>
+              </a>
+            </mat-card-content>
+          </mat-card>
+
         </div>
       </div>
     </div>

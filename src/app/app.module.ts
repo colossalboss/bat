@@ -44,6 +44,7 @@ import { PicksComponent } from './picks/picks.component';
 import { ThoughtComponent } from './thought/thought.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { HomePostComponent } from './home-post/home-post.component';
+import {AuthGuard} from './auth.guard';
 
 
 // Client id for the google oauth. This is used for validation of our application to google.
