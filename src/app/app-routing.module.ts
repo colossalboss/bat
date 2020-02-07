@@ -23,7 +23,7 @@ import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   // {path: 'landing', component: LandingComponent},
-  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'trends', component: TrendsComponent},
@@ -34,7 +34,7 @@ const routes: Routes = [
   {path: 'tip/thoughts', component: ThoughtComponent},
   {path: 'tip', component: TipComponent},
   {path: 'fixtures', component: FixturesComponent},
-  {path: 'profile', component: ProfileComponent,
+  {path: 'profile', component: ProfileComponent,  canActivate: [AuthGuard],
   children: [
     {path: 'posts', component: UserPostsComponent},
     {path: 'media', component: UserMediaComponent}
