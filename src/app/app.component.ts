@@ -66,4 +66,8 @@ export class AppComponent {
       nf.classList.remove('show');
     }
   }
+
+  onSet() {
+    this.loginService.updateBroadCastMessage(true);
+  }
 }

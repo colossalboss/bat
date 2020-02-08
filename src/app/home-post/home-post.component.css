@@ -2,8 +2,10 @@
   padding: 0;
 }
 
-.p2 {
+.p2 a {
   /* padding: .5rem; */
+  text-decoration: none !important;
+  color: inherit;
 }
 
 .no-p {
@@ -41,4 +43,17 @@
 
 .row {
   margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.liked {
+  color: green !important;
+  background: #000 !important;
 }

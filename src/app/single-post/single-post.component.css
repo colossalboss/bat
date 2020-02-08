@@ -2,8 +2,9 @@
   padding: 0;
 }
 
-.p2 {
-  /* padding: .5rem; */
+.p2 a {
+  text-decoration: none !important;
+  color: inherit;
 }
 
 .no-p {

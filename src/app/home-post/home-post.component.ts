@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild  } from '@angular/core';
+import {Router, ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
+import {CommentService} from '../comment.service';
+
 
 @Component({
   selector: 'app-home-post',
@@ -7,52 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePostComponent implements OnInit {
 
-  posts = [
-    {
-      username: 'Godstar',
-      // tslint:disable-next-line:max-line-length
-      thought: 'I am sure of that nothing can change, it is a fact of life that man utd can never earn a point against chelsea, I assure you',
-      likes: 40,
-      Comment: 80,
-      streak: ['W', 'L', 'D', 'W', 'W', 'D', 'D', 'L', 'L']
-    },
-    {
-      username: 'Gerrald',
-      // tslint:disable-next-line:max-line-length
-      thought: 'I am sure of that nothing can change, it is a fact of life that man utd can never earn a point against chelsea, I assure you',
-      likes: 20,
-      Comment: 8,
-      streak: ['W', 'L', 'D', 'W', 'W', 'D', 'D', 'L', 'L']
-    },
-    {
-      username: 'Colossal',
-      // tslint:disable-next-line:max-line-length
-      thought: 'I am sure of that nothing can change, it is a fact of life that man utd can never earn a point against chelsea, I assure you',
-      likes: 40,
-      Comment: 80,
-      streak: ['W', 'L', 'D', 'W', 'W', 'D', 'D', 'L', 'L']
-    },
-    {
-      username: 'ColossalBoss',
-      // tslint:disable-next-line:max-line-length
-      thought: 'I am sure of that nothing can change, it is a fact of life that man utd can never earn a point against chelsea, I assure you',
-      likes: 40,
-      Comment: 80,
-      streak: ['W', 'L', 'D', 'W', 'W', 'D', 'D', 'L', 'L']
-    },
-    {
-      username: 'DBoss',
-      // tslint:disable-next-line:max-line-length
-      thought: 'I am sure of that nothing can change, it is a fact of life that man utd can never earn a point against chelsea, I assure you',
-      likes: 40,
-      Comment: 80,
-      streak: ['W', 'L', 'D', 'W', 'W', 'D', 'D', 'L', 'L']
-    }
-  ];
+  posts;
 
-  constructor() { }
+  comments;
+
+  constructor(private router: Router, private commentService: CommentService) { }
 
   ngOnInit() {
+    this.commentService.broadCast.subscribe(broadCast => this.posts = broadCast);
+  }
+
+  like(event, id): void {
+    const elem = event.target;
+    const targetObj = this.posts.find(obj => obj.id === id);
+    if (event.target.classList.contains('liked')) {
+      event.target.classList.remove('liked');
+      targetObj.likes -= 1;
+      console.log(typeof this.posts.likes);
+      console.log('reduced');
+
+    } else {
+      event.target.classList.add('liked');
+      targetObj.likes += 1;
+      console.log('increased');
+      console.log(typeof this.posts.likes);
+
+    }
   }
 
 }

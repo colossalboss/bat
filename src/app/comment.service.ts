@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../login.service';
+import { Injectable } from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
-@Component({
-  selector: 'app-single-post',
-  templateUrl: './single-post.component.html',
-  styleUrls: ['./single-post.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class SinglePostComponent implements OnInit {
+export class CommentService {
+
+  details = {
+    postOwner: '',
+    post: '',
+    image: ''
+  };
 
   posts = [
     {
@@ -61,18 +65,12 @@ export class SinglePostComponent implements OnInit {
     }
   ];
 
-  userDetails;
+  private post = new BehaviorSubject(this.posts);
+  broadCast = this.post.asObservable();
 
+  constructor() { }
 
-  constructor(private loginService: LoginService) { }
-
-  ngOnInit() {
-    this.loginService.brodCast.subscribe(broadCast => this.userDetails = broadCast);
-    const firstname = this.userDetails.name.split(' ')[0];
-    this.posts.forEach(obj => {
-      obj.username = firstname;
-      obj.image = this.userDetails.photoUrl;
-    });
+  updatePost(value): void {
+    this.post.next(value);
   }
-
 }
