@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.height {
+  height: 100vh;
+}
+
 .spec {
   height: 100vh;
   overflow-y: scroll;
@@ -33,7 +37,7 @@ a:hover {
 }
 
 .toolbar {
-  height: 60px;
+  height: 7vh;
   display: flex;
   align-items: center;
   background-color: #1976d2;
@@ -104,10 +108,10 @@ a:hover {
   font-weight: bold;
 }
 
-#trends-section,
-#standings-section {
-  /* height: 95.591vh;
-  background: #fff; */
+.c-h {
+  height: 92.591vh;
+  background: #fff;
+  overflow-y: scroll;
 }
 
 @media (max-width: 786px) {
